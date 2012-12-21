@@ -10,7 +10,6 @@ gem 'thin'
 
 group :production do
   gem 'fog'
-  gem 'newrelic_rpm'
 end
 
 # Gems used only for assets and not required
