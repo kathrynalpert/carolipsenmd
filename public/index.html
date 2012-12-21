@@ -1,241 +1,109 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" version="-//W3C//DTD XHTML 1.1//EN" xml:lang="en">
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
+<head>
+	<title>Carol A. Ipsen, M.D. | Psychiatrist</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>	
+	<meta http-equiv="description" content="Carol Ipsen, M.D. Psychiatrist; Individual Psychotherapy 
+			and Pharmacotherapy for Treatment of Anxiety, Depression, Self-Esteem Problems, Trauma, 
+			and OCD; Treatment of Psychiatric Disorders during Pregnancy and Postpartum; Treatment 
+			of Professionals; Couples Treatment" />	
+	<meta http-equiv="keywords" content="Carol Ipsen M.D. psychiatrist psychiatry therapy doctor 
+		New York Capital District Albany Troy Schenectady Slingerlands Voorheesville Delmar Guilderland Bethlehem" />
+	<link rel="stylesheet" href="/css/layouts.css" media="screen"  />
+	<link rel="shortcut icon" href="/images/favicon.ico"  />
+	<meta name="google-site-verification" content="GnvsjqrOlexzExUTK_oZbIg_PVU9xSyQH3cFDNxzexk" />
+	<meta name="google-site-verification" content="AcaWGZ6MHaBeMmN5I7r_Ya9RmVctUNWt-tmpZUMsQgM" />	
+</head>
 
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("assets/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-      .filename {
-        font-style: italic;
-      }
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+<body>
+	<div id="wrap"> 
+		<div id="page">
+			<div id="header">
+				<img src="/images/cilogo.gif" id="logo"  /> 	
+				<br class="clear" style="clear:both;" />
+			</div>
+			<div id="content">
+				<div id="layout" class="threecolumn">
+					<div class="nav">
+						<div class="element menu">
+							<ul class="cushycms">
+								<li><a href="http://www.carolipsenmd.com" class="selected">Home</a></li>
+								<li><a href="location.html">Location</a></li>
+								<li><a href="credentials.html">Credentials</a></li>
+								<li><a href="newPatients.html">Information for New Patients</a></li>
+								<li><a href="reading.html">Recommended Reading</a></li>								
+								<li><a href="privacy.html">Patient Privacy</a></li>
+							</ul>
+							<br style="clear:both;" />	
+						</div>						
+						<div class="element"></div>
+					</div>
+					<div class="main">				
+						<div class="secondary" style="float:right">
+							<div class="element photo-element random cushycms" title="Photo">
+								<img src="/images/CarolIpsenMD.jpg"  alt="photo.jpg" class="photo"  />	
+							</div>	
+							<div class="element caption random cushycms">						
+								<h1>Carol A. Ipsen, M.D.</h1>
+								<p>
+									<a href="location.html" title="View Map" style="text-decoration: none;">
+									1240 New Scotland Road, Suite 204
+									Slingerlands, New York 12159</a>
+									<b>518.439.5624</b>
+								</p>
+							</div>
+						</div>
+						<div class="element content default">
+							<div class="article cushycms">		
+								<h1>Psychiatric Specialties</h1>
+								<div class="body">
+									<p>Individual Psychotherapy and Pharmacotherapy for Treatment of Anxiety, Depression, 
+									Self-Esteem Problems, Trauma, and OCD; Treatment of Psychiatric Disorders during Pregnancy and 
+									Postpartum; Treatment of Professionals; Couples Treatment</p>
+								</div>
+								<h1>Care Philosophy</h1>
+								<div class="body">
+									<p>I provide high quality, personalized, confidential psychiatric care. 
+									I use an integrated approach and pay special attention to 
+									relationship issues and current life stresses which may be 
+									contributing to the problem.</p>
+									<p>Anxiety and depression problems are generated by biological, 
+									interpersonal and developmental factors, which interact in a complex 
+									manner. I feel that medication alone often is not adequate 
+									treatment and that gaining some understanding of what is causing the 
+									mood disorder is crucial in obtaining long-term relief. My focus is 
+									on helping people with achieving a greater understanding of 
+									their difficulties and on working to develop healthier ways of 
+									coping with stress and finding greater satisfaction in their 
+									personal and professional lives.</p>
+								</div>	
+							</div>
+						</div>
+					</div>
+					<br class="clear" style="clear:both;" />
+				</div>
+			</div>
+		 </div>
+		 <div id="footer">
+			<div class="element text callout">
+				&copy;&nbsp;Carol Ipsen M.D.
+				<p>Website by <a href="http://kathrynalpert.com">Kathryn Alpert</a></p>
+				<p>&nbsp;</p><p>&nbsp;</p>	
+			</div>
+			<br class="clear" style="clear:both;" />
+		</div>
+	</div>		
+</body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11843143-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
 </html>
