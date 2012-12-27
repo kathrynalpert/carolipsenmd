@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Carolipsenmd::Application.config.secret_token = '2dd172c1451cf1c9df6b82c999cfc70befdf79284f2cb6c584bd7e431818f6243423d07e561514d9845b802fdf4b08bd7701a31d3a5d21174c8523bc49cd597a'
+Carolipsenmd::Application.config.secret_token = '8b1532ecf6ca712a3580f941ad709997f777a758c2ef2671fc0fe19d7ef86032cbd6af67c984f7100dcb06a82a9f8dcd36b052f03de1b21781930c14ef3914df'
